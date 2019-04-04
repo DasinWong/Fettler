@@ -53,7 +53,7 @@ public class BaseApplication extends Application {
 ```
 #### 2.执行修复
 ```
-//获取补丁包文件（正常情况下应该是通过网络下载到本地）
+//获取补丁包文件（实际环境中通过网络下载到本地）
 File dexFile = new File(Environment.getExternalStorageDirectory(), "XXX.dex");
 
 //添加dex文件和监听，开始修复
