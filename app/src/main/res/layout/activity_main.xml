@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/hotfix"
+        android:layout_marginBottom="10dp"
+        android:onClick="calculate"
+        android:text="点击运算" />
+
+    <Button
+        android:id="@+id/hotfix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="hotfix"
+        android:text="热修复" />
+
+</RelativeLayout>
