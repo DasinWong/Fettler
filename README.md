@@ -44,10 +44,10 @@ dependencies {
 public class BaseApplication extends Application {
 
     @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(base);
+    protected void attachBaseContext(Context context) {
+        super.attachBaseContext(context);
         //初始化Fettler
-        Fettler.init(this);
+        Fettler.init(context);
     }
 }
 ```
