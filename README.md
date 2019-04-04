@@ -3,7 +3,7 @@ Android 热修复框架 （基于类加载机制的代码修复）
 - 支持 Android 5.0 以上设备
 - 运行时修复，应用无需重启
 - 版本更新时要注意dex修复包的清理
-## 如何接入
+## 1.如何接入
 Project层级下的build.gradle文件
 ```
 allprojects {
@@ -20,7 +20,7 @@ dependencies {
     implementation 'com.github.dasinwong:Fettler:1.0'
 }
 ```
-## 类及其方法介绍
+## 2.类及其方法介绍
 ### Fettler
 热修复核心类
 
@@ -38,8 +38,8 @@ dependencies {
 | 方法 | 描述 |
 | :-------------: | :-------------: |
 | onComplete | 修复完成时回调 |
-## 使用方法
-#### 1.程序启动时进行初始化
+## 3.使用方法
+#### 3.1 程序启动时进行初始化
 ```
 public class BaseApplication extends Application {
 
@@ -51,7 +51,7 @@ public class BaseApplication extends Application {
     }
 }
 ```
-#### 2.执行修复
+#### 3.2 执行修复
 ```
 //获取补丁包文件（实际环境中通过网络下载到本地）
 File dexFile = new File(Environment.getExternalStorageDirectory(), "XXX.dex");
@@ -64,7 +64,7 @@ Fettler.with(this).add(dexFile).listen(new FixListener() {
     }
 }).start();
 ```
-#### 3.清理修复包
+#### 3.3 清理修复包
 在版本更新时清理
 ```
 //直接调用静态方法清理
@@ -73,7 +73,7 @@ Fettler.clear(this);
 //创建Fettler对象清理
 Fettler.with(this).clear();
 ```
-## 需要权限
+## 4.需要权限
 ```
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
