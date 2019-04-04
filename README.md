@@ -70,7 +70,7 @@ Fettler.with(this).add(dexFile).listen(new FixListener() {
 //直接调用静态方法清理
 Fettler.clear(this);
 
-//创建HotPatcher对象清理
+//创建Fettler对象清理
 Fettler.with(this).clear();
 ```
 ## 需要权限
